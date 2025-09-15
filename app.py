@@ -3,7 +3,7 @@ import pandas as pd
 import geopandas as gpd
 import pydeck as pdk
 import json
-from streamlit_supabase_connection import SupabaseConnection
+from st_supabase_connection import SupabaseConnection
 
 # --- Configuración de la página ---
 st.set_page_config(layout="wide", page_title="Visor 3D de Edificios")
