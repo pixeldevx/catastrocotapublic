@@ -1,4 +1,7 @@
 streamlit
-supabase
 geopandas
 pydeck
+sqlalchemy
+psycopg2-binary
+GeoAlchemy2
+streamlit-supabase-connection
