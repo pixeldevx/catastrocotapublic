@@ -53,7 +53,7 @@ if not data.empty:
     }
     selected_style = st.sidebar.selectbox("Elige un estilo de mapa base:", list(map_style_options.keys()))
 
-    # --- Procesamiento para visualización ---
+    # --- Procesamiento para visualizadción ---
     data['altura_metros'] = data['pisos'] * 3
 
     # --- Configuración del mapa 3D con Pydeck ---
