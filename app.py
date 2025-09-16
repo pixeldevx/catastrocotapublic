@@ -29,7 +29,7 @@ def load_data():
         engine = create_engine(db_url)
         
         # 4. Define la consulta SQL para obtener los datos
-        sql_query = "SELECT total_piso, geometria FROM edificios"
+        sql_query = "SELECT total_piso, geometry FROM edificios"
         
         # 5. Carga los datos directamente en un GeoDataFrame usando GeoPandas
         gdf = gpd.read_postgis(sql_query, engine, geom_col='geometry')
