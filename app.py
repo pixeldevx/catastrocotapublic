@@ -32,7 +32,7 @@ def load_data():
         sql_query = "SELECT total_piso, geometria FROM edificios"
         
         # 5. Carga los datos directamente en un GeoDataFrame usando GeoPandas
-        gdf = gpd.read_postgis(sql_query, engine, geom_col='geometria')
+        gdf = gpd.read_postgis(sql_query, engine, geom_col='geometry')
         
         return gdf
 
@@ -54,7 +54,7 @@ if not data.empty:
     selected_style = st.sidebar.selectbox("Elige un estilo de mapa base:", list(map_style_options.keys()))
 
     # --- Procesamiento para visualizadción ---
-    data['altura_metros'] = data['pisos'] * 3
+    data['altura_metros'] = data['total_piso'] * 3
 
     # --- Configuración del mapa 3D con Pydeck ---
     st.subheader("Mapa Interactivo 3D")
